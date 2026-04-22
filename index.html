@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhizopus: The Master Educator</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #27ae60;
+            --dark: #1a252f;
+            --accent: #e67e22;
+            --light: #f4f7f6;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; background: var(--light); color: var(--primary); }
+        header { background: var(--dark); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
+        nav { display: flex; justify-content: center; background: var(--primary); position: sticky; top: 0; z-index: 100; overflow-x: auto; }
+        nav button { background: none; border: none; color: white; padding: 15px 25px; cursor: pointer; font-size: 14px; font-weight: bold; text-transform: uppercase; transition: 0.3s; white-space: nowrap; }
+        nav button:hover { background: var(--secondary); }
+        .container { max-width: 1000px; margin: 30px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .content-section { display: none; }
+        .active { display: block; animation: slideIn 0.4s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        h2 { color: var(--secondary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 30px; }
+        .process-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; transition: transform 0.2s; }
+        .process-card:hover { border-color: var(--secondary); }
+        .process-card h3 { color: var(--accent); margin-top: 0; }
+        
+        /* Quiz Styling */
+        .quiz-container { background: #f9f9f9; padding: 30px; border-radius: 10px; border: 2px dashed #ccc; }
+        .question-text { font-weight: bold; margin-bottom: 15px; display: block; font-size: 1.1rem; }
+        .dok-badge { font-size: 0.8rem; background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; display: inline-block; }
+        .option { display: block; margin-bottom: 8px; padding: 12px; background: white; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: 0.2s; }
+        .option:hover { background: #e8f5e9; }
+        .correct { background-color: #c8e6c9 !important; border-color: #27ae60 !important; }
+        .wrong { background-color: #ffcdd2 !important; border-color: #e74c3c !important; }
+        #quiz-feedback { margin-top: 15px; font-weight: bold; min-height: 24px; }
+        .quiz-nav { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-btn { background: var(--secondary); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 15px; border-bottom: 1px solid #ddd; }
+        th { background-color: var(--primary); color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rhizopus Stolonifer</h1>
+    <p>A Complete Biological Study of Black Bread Mold</p>
+</header>
+
+<nav>
+    <button onclick="showSection('morphology')">Morphology</button>
+    <button onclick="showSection('mrs-gren')">Life Processes (MRS GREN)</button>
+    <button onclick="showSection('importance')">Economic Importance</button>
+    <button onclick="showSection('quiz')">Test Your Knowledge</button>
+</nav>
+
+<div class="container">
+    
+    <section id="morphology" class="content-section active">
+        <h2>Physical Features & Structure</h2>
+        <p><strong>Rhizopus</strong> is a genus of filamentous fungi belonging to the phylum <strong>zygomycota</strong>, characterized by <strong>coenocytic hyphae</strong> and the ability to reproduce asexually through <strong>sporangiophores</strong> and sexually through <strong>zygospores</strong>.</p>
+        <ul>
+            <li><strong>Mycelium:</strong> The vegetative body consisting of a network of hyphae.</li>
+            <li><strong>Stolons:</strong> Horizontal hyphae that colonize the surface area.</li>
+            <li><strong>Rhizoids:</strong> Branching clusters that grow into the substrate for anchorage and digestion.</li>
+            <li><strong>Sporangiophores:</strong> Erect, vertical stalks produced from the nodes.</li>
+            <li><strong>Sporangia:</strong> Black globose structures containing numerous asexual spores.</li>
+            <li><strong>Gametangia:</strong> Specialized hyphal tips formed during sexual reproduction when two compatible mating strains meet.</li>
+            <li><strong>Zygosporangium:</strong> A thick-walled, resistant structure that develops from the fusion of gametangia, housing the zygospore.</li>
+        </ul>
+    </section>
+
+    <section id="mrs-gren" class="content-section">
+        <h2>Deep Analysis: The 7 Life Processes</h2>
+        
+        <div class="process-card">
+            <h3>1. Movement</h3>
+            <p>While Rhizopus lacks muscle or locomotive organs, it exhibits <strong>Growth Movement</strong>. It spreads by extending its <strong>stolons</strong> across the substrate. Internally, it performs <strong>protoplasmic streaming</strong>, where the cytoplasm flows toward the hyphal tips to facilitate rapid expansion.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>2. Respiration</h3>
+            <p>Rhizopus performs <strong>Aerobic Respiration</strong>. It absorbs oxygen through its thin chitinous walls and uses it to break down glucose into energy ($ATP$), releasing $CO_2$ and water as by-products.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>3. Sensitivity</h3>
+            <p>It responds to environmental stimuli (Irritability):
+                <ul>
+                    <li><strong>Chemotropism:</strong> Hyphae grow toward nutrient-rich areas.</li>
+                    <li><strong>Hydrotropism:</strong> It grows toward moisture.</li>
+                    <li><strong>Phototropism:</strong> Sporangiophores grow toward light to aid in spore dispersal.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="process-card">
+            <h3>4. Growth</h3>
+            <p>Growth is <strong>Apical</strong> (at the tips). As nutrients are absorbed, the fungus synthesizes new cytoplasm and cell wall material (Chitin), causing the hyphae to lengthen rapidly.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>5. Reproduction</h3>
+            <p><strong>Asexual (Sporulation):</strong> Most common. Sporangia produce thousands of airborne spores via mitosis. <br>
+               <strong>Sexual (Conjugation):</strong> Occurs between two mating strains (+ and -). They produce <strong>Gametangia</strong> which fuse to form a <strong>Zygosporangium</strong>. Inside, a <strong>Zygospore</strong> forms with a thick, resistant wall allowing survival in extreme conditions.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>6. Excretion</h3>
+            <p>Waste products such as carbon dioxide and excess water are removed through <strong>simple diffusion</strong>. It also secretes organic acids to break down food sources.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>7. Nutrition</h3>
+            <p>Rhizopus is a <strong>Saprophytic Heterotroph</strong>. It uses <strong>Extracellular Digestion</strong>. The rhizoids secrete hydrolytic enzymes onto the food. Nutrients are absorbed through the cell wall once broken down.</p>
+        </div>
+    </section>
+
+    <section id="importance" class="content-section">
+        <h2>Economic Importance</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Bio-Technology</strong></td><td>Production of Fumaric, Lactic, and Citric acids.</td></tr>
+                <tr><td><strong>Food Production</strong></td><td>Used to ferment soybeans into <strong>Tempeh</strong>.</td></tr>
+                <tr><td><strong>Medicine</strong></td><td>Production of <strong>Cortisone</strong> and steroids.</td></tr>
+                <tr><td><strong>Decomposition</strong></td><td>Recycling nutrients by breaking down organic litter.</td></tr>
+                <tr><td><strong>Pathology</strong></td><td>Causes <strong>soft rot</strong> and <strong>Mucormycosis</strong>.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="quiz" class="content-section">
+        <h2>Test Your Knowledge (50 Questions)</h2>
+        <div class="quiz-container">
+            <div id="quiz-meta">
+                <span id="dok-display" class="dok-badge">DOK Level 1</span>
+                <span id="q-progress" style="float: right; font-weight: bold;">Question 1/50</span>
+            </div>
+            <div id="question-container">
+                <p id="question-text" class="question-text"></p>
+                <div id="options-container"></div>
+            </div>
+            <div id="quiz-feedback"></div>
+            <div class="quiz-nav">
+                <button class="nav-btn" id="prev-btn" onclick="prevQuestion()" disabled>Previous</button>
+                <button class="nav-btn" id="next-btn" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    const questions = [
+        // DOK 1
+        { q: "To which phylum does Rhizopus belong?", a: ["Ascomycota", "Zygomycota", "Basidiomycota", "Deuteromycota"], c: 1, d: 1 },
+        { q: "What is the term for hyphae that lack cross-walls?", a: ["Septate", "Multicellular", "Coenocytic", "Uninucleate"], c: 2, d: 1 },
+        { q: "Which structure anchors Rhizopus to its substrate?", a: ["Stolons", "Rhizoids", "Sporangia", "Gametangia"], c: 1, d: 1 },
+        { q: "What color are mature sporangia in black bread mold?", a: ["Green", "White", "Black", "Yellow"], c: 2, d: 1 },
+        { q: "The horizontal hyphae that spread across a surface are called:", a: ["Rhizoids", "Sporangiophores", "Stolons", "Gametangia"], c: 2, d: 1 },
+        { q: "Rhizopus reproduces asexually by forming:", a: ["Zygospores", "Seeds", "Spores in sporangia", "Buds"], c: 2, d: 1 },
+        { q: "Which chemical makes up the cell walls of Rhizopus?", a: ["Cellulose", "Chitin", "Peptidoglycan", "Lignin"], c: 1, d: 1 },
+        { q: "Vertical stalks that support spore-bearing structures are:", a: ["Sporangiophores", "Stolons", "Rhizoids", "Septa"], c: 0, d: 1 },
+        { q: "What type of nutrition does Rhizopus exhibit?", a: ["Autotrophic", "Parasitic", "Saprophytic", "Holozic"], c: 2, d: 1 },
+        { q: "The structure formed by the fusion of two gametangia is the:", a: ["Sporangium", "Zygosporangium", "Stolon", "Rhizoid"], c: 1, d: 1 },
+        { q: "Which process creates asexual spores in Rhizopus?", a: ["Meiosis", "Mitosis", "Conjugation", "Binary Fission"], c: 1, d: 1 },
+        { q: "What gas is released during Rhizopus respiration?", a: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Methane"], c: 2, d: 1 },
+
+        // DOK 2
+        { q: "How do rhizoids facilitate extracellular digestion?", a: ["By moving the fungus", "By secreting hydrolytic enzymes", "By absorbing sunlight", "By producing spores"], c: 1, d: 2 },
+        { q: "What is the primary function of the zygospore's thick wall?", a: ["To aid in flight", "To survive harsh environmental conditions", "To absorb water", "To attract insects"], c: 1, d: 2 },
+        { q: "In MRS GREN, 'Sensitivity' in Rhizopus is shown by growth toward light. This is:", a: ["Chemotropism", "Hydrotropism", "Phototropism", "Geotropism"], c: 2, d: 2 },
+        { q: "Which feature identifies Rhizopus as coenocytic?", a: ["Lack of septa", "Presence of rhizoids", "Black color", "Saprophytic diet"], c: 0, d: 2 },
+        { q: "How does protoplasmic streaming benefit the fungus?", a: ["It kills bacteria", "It transports nutrients to hyphal tips", "It creates spores", "It anchors the stolons"], c: 1, d: 2 },
+        { q: "Contrast stolons and rhizoids.", a: ["Stolons absorb, rhizoids spread", "Stolons spread, rhizoids anchor and absorb", "Both are vertical", "Neither are part of the mycelium"], c: 1, d: 2 },
+        { q: "Why is Rhizopus economically important in medicine?", a: ["It cures bread", "It produces cortisone", "It is used as a bandage", "It prevents mold"], c: 1, d: 2 },
+        { q: "What occurs immediately after two mating strains make contact?", a: ["Spore release", "Formation of gametangia", "Stolon death", "Aerobic respiration stops"], c: 1, d: 2 },
+        { q: "Which enzyme might Rhizopus secrete to digest bread?", a: ["Hemoglobin", "Amylase", "Insulin", "Chlorophyll"], c: 1, d: 2 },
+        { q: "During sexual reproduction, gametangia represent what ploidy level?", a: ["Haploid", "Diploid", "Polyploid", "Aploid"], c: 0, d: 2 },
+
+        // DOK 3
+        { q: "What would happen if Rhizopus was grown in an environment with 0% oxygen?", a: ["Growth would accelerate", "Aerobic respiration would cease, likely killing it", "It would turn into a plant", "It would start photosynthesizing"], c: 1, d: 3 },
+        { q: "Analyze the role of chemotropism in the survival of Rhizopus.", a: ["It allows the fungus to find light", "It allows hyphae to grow toward nutrient-rich substrates", "It prevents sexual reproduction", "It stops water loss"], c: 1, d: 3 },
+        { q: "Evaluate the impact of Mucormycosis in humans.", a: ["It helps digestion", "It is a serious fungal infection usually in the immunocompromised", "It is harmless", "It makes people immune to bread mold"], c: 1, d: 3 },
+        { q: "Compare the effectiveness of asexual vs. sexual reproduction for colonizing a new piece of bread.", a: ["Sexual is faster", "Asexual is faster for rapid colonization via mass spore production", "Both are equally slow", "Neither can colonize bread"], c: 1, d: 3 },
+        { q: "Explain why Rhizopus is classified as a filamentous fungus.", a: ["Because it is round", "Due to its thread-like hyphae forming a mycelium", "Because it is microscopic", "Because it lacks a cell wall"], c: 1, d: 3 },
+        { q: "How do coenocytic hyphae influence the speed of internal transport compared to septate hyphae?", a: ["Transport is slower", "Uninterrupted flow allows for faster transport", "Transport is impossible", "There is no difference"], c: 1, d: 3 },
+        { q: "Why is the production of lactic acid by Rhizopus industrially significant?", a: ["It is used to make plastic", "It is used in food preservation and flavoring", "It makes bread black", "It is used in car engines"], c: 1, d: 3 },
+        { q: "Describe the relationship between apical growth and nutrient absorption.", a: ["They are unrelated", "Absorption provides materials needed for growth at hyphal tips", "Growth must stop for absorption", "Rhizoids grow apically but don't absorb"], c: 1, d: 3 },
+        { q: "What determines whether Rhizopus will undergo sexual reproduction instead of asexual?", a: ["The presence of light", "The meeting of compatible + and - mating types", "The amount of oxygen", "The type of bread"], c: 1, d: 3 },
+
+        // DOK 4
+        { q: "Design a scenario where Rhizopus might fail to reproduce sexually despite mating types being present.", a: ["In perfect conditions", "If environmental stress prevents gametangia formation", "If there is too much bread", "If it grows too fast"], c: 1, d: 4 },
+        { q: "Synthesize why saprophytic fungi like Rhizopus are critical for global nutrient cycling.", a: ["They produce oxygen", "They decompose dead organic matter, returning nitrogen and carbon to the soil", "They eat living plants", "They prevent global warming by cooling bread"], c: 1, d: 4 },
+        { q: "How would a mutation causing a lack of chitin in the cell wall affect Rhizopus?", a: ["It would grow taller", "The hyphae would lack structural integrity and likely collapse", "It would become a bacteria", "It would grow in water only"], c: 1, d: 4 },
+        { q: "Evaluate the evolutionary advantage of having both asexual and sexual reproductive cycles.", a: ["Asexual allows for rapid spread; sexual provides genetic variation and survival structures", "It is a waste of energy", "It makes the fungus look better", "Only sexual reproduction is useful"], c: 0, d: 4 },
+        { q: "Assess the risk of using Rhizopus in biotechnology if safety protocols are not met.", a: ["No risk", "Potential for human infection (Mucormycosis)", "The fungus might eat the factory", "The bread might explode"], c: 1, d: 4 },
+        { q: "How does the extracellular digestion of Rhizopus mimic the human digestive system, and how does it differ?", a: ["It is identical", "Both use enzymes; Rhizopus digests outside the body while humans digest inside", "Humans don't use enzymes", "Rhizopus doesn't use enzymes"], c: 1, d: 4 },
+        { q: "Predict the long-term ecological impact if all Zygomycota were removed from an ecosystem.", a: ["Plants would grow better", "Organic waste would accumulate, slowing nutrient turnover", "No more bread would spoil", "Birds would have more food"], c: 1, d: 4 },
+        { q: "Justify the classification of Rhizopus as a heterotroph based on its MRS GREN profile.", a: ["It moves toward light", "It requires pre-formed organic compounds for nutrition", "It produces oxygen", "It has coenocytic hyphae"], c: 1, d: 4 },
+        { q: "Analyze why sporangiophores grow vertically against gravity.", a: ["To be closer to the sun", "To elevate spores into air currents for wider dispersal", "To hide from the bread", "To absorb oxygen from the roof"], c: 1, d: 4 },
+        { q: "Why is the coenocytic condition considered an adaptation for rapid expansion?", a: ["It makes the fungus lighter", "It allows unrestricted flow of cytoplasm and nutrients to growing points", "It makes the fungus stronger", "It prevents infection"], c: 1, d: 4 },
+        
+        // Fillers for 50 total (Simplified)
+        { q: "What is the primary role of stolons?", a: ["Digestion", "Spreading the fungus", "Sexual fusion", "Producing light"], c: 1, d: 2 },
+        { q: "Gametangia are associated with which cycle?", a: ["Asexual", "Sexual", "Vegetative", "Respiratory"], c: 1, d: 1 },
+        { q: "The vegetative body is collectively called:", a: ["Mushroom", "Mycelium", "Root", "Stem"], c: 1, d: 1 },
+        { q: "Rhizopus oligosporus is used to make:", a: ["Cheese", "Tempeh", "Wine", "Bread"], c: 1, d: 1 },
+        { q: "Mucormycosis is a:", a: ["Medicine", "Disease", "Nutrient", "Spore"], c: 1, d: 1 },
+        { q: "Sporulation is a form of:", a: ["Movement", "Excretion", "Reproduction", "Sensitivity"], c: 2, d: 1 },
+        { q: "A coenocytic hypha is basically one giant:", a: ["Tissue", "Cell", "Organ", "Organism"], c: 1, d: 2 },
+        { q: "Which tropism refers to water response?", a: ["Phototropism", "Hydrotropism", "Chemotropism", "Geotropism"], c: 1, d: 1 },
+        { q: "Rhizoids are most like which plant part?", a: ["Flowers", "Leaves", "Roots", "Seeds"], c: 2, d: 2 }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+        if (sectionId === 'quiz') {
+            loadQuestion();
+        }
+    }
+
+    function loadQuestion() {
+        const q = questions[currentQuestionIndex];
+        const container = document.getElementById('options-container');
+        const feedback = document.getElementById('quiz-feedback');
+        
+        document.getElementById('question-text').innerText = `${currentQuestionIndex + 1}. ${q.q}`;
+        document.getElementById('q-progress').innerText = `Question ${currentQuestionIndex + 1}/50`;
+        document.getElementById('dok-display').innerText = `DOK Level ${q.d}`;
+        feedback.innerText = '';
+        container.innerHTML = '';
+
+        q.a.forEach((option, index) => {
+            const div = document.createElement('div');
+            div.className = 'option';
+            div.innerText = option;
+            div.onclick = () => checkAnswer(div, index === q.c);
+            container.appendChild(div);
+        });
+
+        document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+        document.getElementById('next-btn').innerText = currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next';
+    }
+
+    function checkAnswer(element, isCorrect) {
+        const options = document.querySelectorAll('.option');
+        options.forEach(opt => opt.style.pointerEvents = 'none');
+        
+        const feedback = document.getElementById('quiz-feedback');
+        if (isCorrect) {
+            element.classList.add('correct');
+            feedback.innerHTML = "✅ Correct!";
+            feedback.style.color = "green";
+        } else {
+            element.classList.add('wrong');
+            feedback.innerHTML = "❌ Incorrect.";
+            feedback.style.color = "red";
+            options[questions[currentQuestionIndex].c].classList.add('correct');
+        }
+    }
+
+    function nextQuestion() {
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            loadQuestion();
+        } else {
+            alert("Quiz Completed!");
+            currentQuestionIndex = 0;
+            showSection('morphology');
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            loadQuestion();
+        }
+    }
+
+    // Initialize first section
+    showSection('morphology');
+</script>
+
+</body>
+</html>
